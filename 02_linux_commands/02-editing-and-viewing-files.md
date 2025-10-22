@@ -1,4 +1,4 @@
-## Manipulate Files and Directory
+## Editing and Viewing Files
 As a data engineer, you will constantly interact with text files, scripts, and logs. Here are some essential commands to carry out this operations.
 
 | Command                   | Description                                    | Example                                  |

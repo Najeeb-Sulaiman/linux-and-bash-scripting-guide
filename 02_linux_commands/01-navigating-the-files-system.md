@@ -1,4 +1,4 @@
-Anatomy of a Command
+## Anatomy of a Command
 
 Every shell command follows this structure:
 

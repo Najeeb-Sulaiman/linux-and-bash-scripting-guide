@@ -11,7 +11,6 @@ Redirection lets you chain commands. This is a powerful feature of Linux.
 
 
 **Example**: Count error lines in a log file.
-
 ```bash
 cat app.log | grep "ERROR" | wc -l
 ```

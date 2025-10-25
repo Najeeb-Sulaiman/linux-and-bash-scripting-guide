@@ -15,5 +15,5 @@ These commands help you organize and clean up the Linux file system.
 
 
 **Note:**
-rm -r permanently deletes everything inside the directory — there is no “undo.”
+rm -r permanently deletes everything inside the directory, there is no “undo.”
 Always double-check before pressing Enter.

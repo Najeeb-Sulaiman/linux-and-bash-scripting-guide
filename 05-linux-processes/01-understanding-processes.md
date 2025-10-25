@@ -23,6 +23,7 @@ Each of the above commands runs as a separate process with its own **PID (Proces
     
 - **Background process**: A process that runs behind the scenes (doesn’t block your terminal).
 
+---
 ### Viewing and Managing Processes
 Linux provides useful commands you can use to check system activities. Below are some common ones.
 
@@ -41,6 +42,7 @@ Example: Let's asume you want to show all running Python processes. You can achi
 ps aux | grep python
 ```
 
+---
 ### Starting & Stopping Processes
 Below are some common commands to start and stop processe in Linux.
 

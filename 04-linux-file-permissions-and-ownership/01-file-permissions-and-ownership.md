@@ -159,3 +159,11 @@ Directory file types are indicated with `d`. Conceptually, permissions operate t
 | x          | enter the directory (cd into it)  |
 
 For example, if a directory doesn’t have execute (x) permission, you can’t `cd` into it, even if you can see it.
+
+
+Exercise:
+
+- Make a script executable
+- Give a group write access to a directory
+- Restrict access to a file completely (Only the owner can read/write.)
+- Make a file publicly readable (Owner can read/write, others can only read.)

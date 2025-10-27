@@ -58,9 +58,13 @@ This means:
 
 ### How to Change Permissions:
 
-We use the `chmod` command to change permissions in Linux. `chmod` means **change mode**
+We use the `chmod` command to change permissions in Linux. `chmod` means **change mode**.
 
-There are two ways we use it:
+To specify what type of modification we want to made, we use symbols:
+
+- Add (+), remove (-), or set (=) permissions.
+
+There are two ways we can modufy permissions:
 
 - symbolic mode
 - Octal (numeruc) mode
@@ -143,3 +147,15 @@ Change both owner and group:
 ```bash
 sudo chown najeeb:devs etl.py
 ```
+
+### Directory Permissions
+
+Directory file types are indicated with `d`. Conceptually, permissions operate the same way, but directories interpret these operations differently.
+
+| Permission | Meaning                           |
+| ---------- | --------------------------------- |
+| r          | list files in the directory       |
+| w          | add/remove files in the directory |
+| x          | enter the directory (cd into it)  |
+
+For example, if a directory doesn’t have execute (x) permission, you can’t `cd` into it, even if you can see it.

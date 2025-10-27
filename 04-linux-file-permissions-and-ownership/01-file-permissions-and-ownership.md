@@ -71,17 +71,17 @@ Let's look at some example and understand how they work:
 
     - Let's add a write permission for the `dev` group above:
     ```bash
-    chmod g+w weather.py
+    chmod g+w etl.py
     ```
 
     - Let's remove execute permission for others:
     ```bash
-    chmod o-x weather.py
+    chmod o-x etl.py
     ```
 
     - Let's give everyone execute permission:
     ```bash
-    chmod a+x weather.py
+    chmod a+x etl.py
     ```
     (a means all: user + group + others)
 
@@ -109,7 +109,7 @@ Let's look at some example and understand how they work:
     Example:
 
     ```bash
-    chmod 754 weather.py
+    chmod 754 etl.py
     ```
 
     What does that mean?
@@ -127,3 +127,19 @@ Let's look at some example and understand how they work:
     Group: read, execute
     Others: read
     ```
+
+### How to Change Ownership:
+
+Permissions are tied to ownership and you can chnge who owns a file using the command `chown`.
+
+For example:
+
+```bash
+sudo chown najeeb etl.py
+```
+
+Change both owner and group:
+
+```bash
+sudo chown najeeb:devs etl.py
+```

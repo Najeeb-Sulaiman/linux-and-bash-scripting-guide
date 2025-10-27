@@ -56,3 +56,31 @@ This means:
 
 - Others can only read
 
+### How to Change Permissions:
+
+We use the `chmod` command to change permissions in Linux. `chmod` means **change mode**
+
+There are two ways we use it:
+
+- symbolic mode
+- Octal (numeruc) mode
+
+Let's look at some example and understand how they work:
+
+- Symbolic Mode Examples
+
+    - Let's add a write permission for the `dev` group above:
+    ```bash
+    chmod g+w weather.py
+    ```
+
+    - Let's remove execute permission for others:
+    ```bash
+    chmod o-x weather.py
+    ```
+
+    - Let's give everyone execute permission:
+    ```bash
+    chmod a+x weather.py
+    ```
+    (a means all: user + group + others)

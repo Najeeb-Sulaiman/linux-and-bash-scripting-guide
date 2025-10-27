@@ -67,7 +67,7 @@ There are two ways we use it:
 
 Let's look at some example and understand how they work:
 
-- Symbolic Mode Examples
+- **Symbolic Mode Examples**
 
     - Let's add a write permission for the `dev` group above:
     ```bash
@@ -84,3 +84,46 @@ Let's look at some example and understand how they work:
     chmod a+x weather.py
     ```
     (a means all: user + group + others)
+
+
+- **Octal Mode (Numeric)**:
+
+    Each permission has a number value:
+
+    | Permission | Value |
+    | ---------- | ----- |
+    | r          | 4     |
+    | w          | 2     |
+    | x          | 1     |
+
+    You add them up to represent combinations:
+
+    | Permissions | Value |
+    | ----------- | ----- |
+    | rwx         | 7     |
+    | rw-         | 6     |
+    | r-x         | 5     |
+    | r--         | 4     |
+    | ---         | 0     |
+
+    Example:
+
+    ```bash
+    chmod 754 weather.py
+    ```
+
+    What does that mean?
+
+    - 7 (rwx) → owner
+
+    - 5 (r-x) → group
+
+    - 4 (r--) → others
+
+    This means:
+
+    ```bash
+    Owner: read, write, execute
+    Group: read, execute
+    Others: read
+    ```

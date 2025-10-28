@@ -67,7 +67,7 @@ To specify what type of modification we want to made, we use symbols:
 There are two ways we can modufy permissions:
 
 - symbolic mode
-- Octal (numeruc) mode
+- Octal (numeric) mode
 
 Let's look at some example and understand how they work:
 
@@ -87,7 +87,7 @@ Let's look at some example and understand how they work:
     ```bash
     chmod a+x etl.py
     ```
-    (a means all: user + group + others)
+    (`a` means all: user + group + others)
 
 
 - **Octal Mode (Numeric)**:
@@ -138,6 +138,7 @@ Permissions are tied to ownership and you can chnge who owns a file using the co
 
 For example:
 
+To change ownership of `etl.py` file:
 ```bash
 sudo chown najeeb etl.py
 ```
@@ -150,7 +151,7 @@ sudo chown najeeb:devs etl.py
 
 ### Directory Permissions
 
-Directory file types are indicated with `d`. Conceptually, permissions operate the same way, but directories interpret these operations differently.
+Directory file types are indicated with `d`.Conceptually, permissions operate the same way, but directories interpret these operations differently.
 
 | Permission | Meaning                           |
 | ---------- | --------------------------------- |
@@ -158,7 +159,7 @@ Directory file types are indicated with `d`. Conceptually, permissions operate t
 | w          | add/remove files in the directory |
 | x          | enter the directory (cd into it)  |
 
-For example, if a directory doesn’t have execute (x) permission, you can’t `cd` into it, even if you can see it.
+For example, if a directory doesn’t have **execute (x)** permission, you can’t `cd` into it, even if you can see it.
 
 
 Exercise:

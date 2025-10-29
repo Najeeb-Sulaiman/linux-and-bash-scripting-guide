@@ -65,3 +65,14 @@
     - Create a directory named `project/logs/2025`.
     - Create a new file `system.log` inside it.
 
+### Searching, Sorting, and Filtering
+
+1. Create a file called `names.txt` with several names (one per line).
+
+2. Display all names that contain the letter `a` (case-insensitive).
+
+3. Count how many lines contain a particular name e.g “Kate”.
+
+4. Sort the names alphabetically and remove duplicates.
+
+5. Show only the first 3 unique names.

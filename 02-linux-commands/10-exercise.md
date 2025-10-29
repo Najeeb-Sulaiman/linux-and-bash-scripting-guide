@@ -42,3 +42,26 @@
 
 9. Overite the content of `all.txt` file with a new text.
 
+### Copying, Moving, and Deleting
+
+1. Create a new directory named `backup`.
+
+2. Copy one of your text files into the `backup` folder.
+
+3. Copy the entire `practice_files` directory into a new folder called `archive` recursively.
+
+4. Rename a file inside `archive`
+
+6. Move a file from `backup` back to `practice_files`
+
+7. Create a new folder `temp_data` and an empty file inside it.
+
+8. Try deleting the file.
+
+9. Try deleting the entire `temp_data` folder
+
+10. In one command:
+
+    - Create a directory named `project/logs/2025`.
+    - Create a new file `system.log` inside it.
+

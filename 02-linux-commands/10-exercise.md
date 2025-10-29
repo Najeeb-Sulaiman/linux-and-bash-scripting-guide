@@ -1,5 +1,7 @@
 ## Practical Exercises
 
+Attempt the below exercises to practice the Linux commands you have learnt.
+
 ### Navigating the File System
 
 1. Print your current working directory.

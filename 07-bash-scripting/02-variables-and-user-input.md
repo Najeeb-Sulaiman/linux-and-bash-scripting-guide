@@ -58,3 +58,23 @@ Enter your project name:
 etl_pipeline
 Creating project folder: etl_pipeline
 ```
+
+### Environment Variables
+
+Bash comes with `built-in variables` provided by the system. For example:
+
+| Variable    | Description       | Example Output   |
+| ----------- | ----------------- | ---------------- |
+| `$USER`     | Current username  | `najeeb`         |
+| `$HOME`     | Home directory    | `/home/najeeb`   |
+| `$PWD`      | Current directory | `/data/projects` |
+| `$HOSTNAME` | System hostname   | `data-lab-vm`    |
+| `$SHELL`    | Current shell     | `/bin/bash`      |
+
+Environment variables are useful for building platform-independent scripts that work across systems.
+
+For example:
+
+```bash
+echo "You are logged in as $USER on $HOSTNAME"
+```

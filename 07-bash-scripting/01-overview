@@ -1,0 +1,14 @@
+## Introduction to Bash Scripting
+
+Bash scripting is one of the most powerful tools in a data engineer’s toolkit.
+It lets you automate repetitive tasks, manage files, run data pipelines, and glue together tools like Python, Spark, or SQL from the command line. Learning Bash is like learning English, it's very important.
+
+Now,
+### What is a Bash Script?
+
+A Bash script is simply a text file that contains a series of Linux commands that execute automatically when run.
+
+Instead of typing each command manually, you can write them once in a script and execute them all at once.
+
+Bash is has a lot of similar concept as other programming languages like Python, so we can somehow say Bash is a programming language.
+

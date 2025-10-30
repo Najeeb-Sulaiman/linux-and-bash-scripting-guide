@@ -14,15 +14,15 @@ Attempt the below exercises to practice the Linux commands you have learnt.
 
 3. Navigate to /etc (or any system directory), then:
 
-- Move up one level
+    - Move up one level
 
-- Move up two levels
+    - Move up two levels
 
-- Return to your home directory
+    - Return to your home directory
 
-4. Navigate to the root directory / and list its contents.
+4. Navigate to the root directory `/` and list its contents.
 
-5. Use TAB autocompletion to type a directory path faster.
+5. Use `TAB` autocompletion to type a directory path faster.
 
 ### Creating, Viewing, and Managing Files
 

@@ -25,3 +25,36 @@ The `name` and `role` are our variable, we are then referencing their value  usi
 - name = "Najeeb" will cause an error.
 - Use `$variable` to access the value.
 - Always quote variable references (`"$name"`) to handle spaces safely.
+
+### Command Substitution
+
+Command substitution lets you store the output of a command inside a variable.
+
+For example:
+
+```bash
+#!/bin/bash
+current_date=$(date)
+echo "The current date and time is: $current_date"
+```
+
+### Reading User Input
+
+Your scripts can interact with users using the read command.
+
+Example:
+
+```bash
+#!/bin/bash
+echo "Enter your project name:"
+read project
+echo "Creating project folder: $project"
+mkdir -p "/projects/$project"
+```
+
+This is wjat you get when you run it (assuming your input is `etl_pipeline`):
+```yaml
+Enter your project name:
+etl_pipeline
+Creating project folder: etl_pipeline
+```

@@ -42,10 +42,10 @@ echo "Today is $(date)"
 ```
 What  does that mean?
 
-`#!/bin/bash`: tells the system to use the Bash interpreter.
-Lines starting with `#`: are comments.
-`echo`: prints text to the terminal.
-`$(date)`: runs the date command and substitutes its output.
+- `#!/bin/bash`: tells the system to use the Bash interpreter.
+- Lines starting with `#`: are comments.
+- `echo`: prints text to the terminal.
+- `$(date)`: runs the date command and substitutes its output.
 
 ### Creating and Running Your First Bash Script
 
@@ -96,4 +96,4 @@ Please take note of the below common mistakes while writting Bash scripts:
 | Not using quotes around variables | Filenames with spaces can break your script.                           |
 
 
-In the next module, we will explore how to make scripts dynamic using variables and user input.
+In the next module, we will explore how to make scripts dynamic using **variables** and **user input**.

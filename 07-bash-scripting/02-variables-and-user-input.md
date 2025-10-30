@@ -40,7 +40,7 @@ echo "The current date and time is: $current_date"
 
 ### Reading User Input
 
-Your scripts can interact with users using the read command.
+Your scripts can interact with users using the `read` command.
 
 Example:
 
@@ -78,3 +78,32 @@ For example:
 ```bash
 echo "You are logged in as $USER on $HOSTNAME"
 ```
+
+### Exporting Variables
+
+Sometimes, you need a variable to be available to child processes or other scripts.
+
+Use `export` for that.
+
+For example:
+
+```bash
+export DATA_PATH="/data/raw"
+```
+
+Now, any program or script you run after that can access `$DATA_PATH`.
+
+You can test this:
+```bash
+echo $DATA_PATH
+```
+
+### Constants and Read-only Variables
+Sometime we want variables to be constant. If a variable should not change during execution, use `readonly`.
+
+```bash
+readonly LOG_DIR="/var/logs/data"
+LOG_DIR="/tmp/logs"   # This will cause an error
+```
+
+Next, we will explore `Conditional Statements`. I personally like this.

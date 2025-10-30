@@ -12,3 +12,23 @@ Instead of typing each command manually, you can write them once in a script and
 
 Bash is has a lot of similar concept as other programming languages like Python, so we can somehow say Bash is a programming language.
 
+### Why Use Bash Scripts as a Data Engineer?
+
+Here are some everyday automation scenarios where Bash can be extremely useful:
+
+| Task                  | Description                                                           |
+| --------------------- | --------------------------------------------------------------------- |
+| **Data Ingestion**    | Automate the download and organization of raw datasets daily.         |
+| **Data Cleaning**     | Run commands (like `awk`, `sed`, `grep`) on multiple files.           |
+| **ETL Orchestration** | Chain multiple scripts together to extract, transform, and load data. |
+| **Environment Setup** | Install dependencies and prepare your local or cloud environment.     |
+| **Monitoring Jobs**   | Automate health checks and send alerts on failures.                   |
+
+
+### Structure of a Bash Script
+
+Every Bash script typically has these parts:
+
+1. Shebang line (defines the interpreter)
+
+2. Commands or logic (what you want to run)

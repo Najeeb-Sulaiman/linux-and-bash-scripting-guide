@@ -84,3 +84,15 @@ Hello Data Engineers!
 This is your first Bash script running on <Your hostname>
 ```
 
+### Common Mistakes to Avoid
+
+Please take note of the below common mistakes while writting Bash scripts:
+
+| Mistake                           | Why It Matters                                                         |
+| --------------------------------- | ---------------------------------------------------------------------- |
+| Forgetting `#!/bin/bash`          | Script may not run correctly or use a different shell.                 |
+| Missing `chmod +x`                | Script won’t be executable.                                            |
+| Using Windows line endings        | Always save files with **Unix (LF)** line endings, not Windows (CRLF). |
+| Not using quotes around variables | Filenames with spaces can break your script.                           |
+
+In the next module, we will explore how to make scripts dynamic using variables and user input.

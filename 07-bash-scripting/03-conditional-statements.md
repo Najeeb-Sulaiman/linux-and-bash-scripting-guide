@@ -38,3 +38,21 @@ Here is what that means:
 - `then` starts the block of code to execute if true.
 - `fi` ends the `if` statement.
 
+### The `if-else` Statement
+
+Sometimes you want to handle both outcome of the condition, the true and the false. This is where we use `if-else` Statement.
+
+For example:
+
+```bash
+#!/bin/bash
+if [ -d "/data/raw" ]
+then
+    echo "Raw data directory found!"
+else
+    echo "Raw data directory missing! Please create it first."
+fi
+```
+
+Here, we are checking wether a directory exists and then taking action for each of the possible outcome (true or fals).
+

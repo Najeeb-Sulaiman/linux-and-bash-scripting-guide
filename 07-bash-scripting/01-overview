@@ -30,5 +30,57 @@ Here are some everyday automation scenarios where Bash can be extremely useful:
 Every Bash script typically has these parts:
 
 1. Shebang line (defines the interpreter)
-
 2. Commands or logic (what you want to run)
+
+Let's look at the following example:
+
+```bash
+#!/bin/bash
+# This is a simple bash script
+echo "Welcome to Bash scripting!"
+echo "Today is $(date)"
+```
+What  does that mean?
+
+`#!/bin/bash`: tells the system to use the Bash interpreter.
+Lines starting with `#`: are comments.
+`echo`: prints text to the terminal.
+`$(date)`: runs the date command and substitutes its output.
+
+### Creating and Running Your First Bash Script
+
+Follow this simple steps to create and run your first bash script:
+
+- Step 1: Create a new file
+     ```bash
+     nano welcome.sh
+     ```
+
+- step 2: Add the following content and save the file
+    ```bash
+    #!/bin/bash
+    echo "Hello Data Engineers!"
+    echo "This is your first Bash script running on $(hostname)"
+    ```
+
+- step 3: Make it executable
+
+    Before running, give it permission:
+    
+    ```bash
+    chmod +x welcome.sh
+    ```
+
+- step 4: Run your script
+
+    ```bash
+    ./welcome.sh
+    ```
+
+You should see output like:
+
+```text
+Hello Data Engineers!
+This is your first Bash script running on <Your hostname>
+```
+

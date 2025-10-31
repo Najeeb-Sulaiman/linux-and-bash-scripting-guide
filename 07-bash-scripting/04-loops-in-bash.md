@@ -123,3 +123,16 @@ A very important aspect of loops is the control statement. We use them to contro
         done
     ```
 
+### Nested Loops
+
+You can place loops inside loops for multi-level processing. For example, if you want to loop over multiple years and months of historical data for reprocessing.
+
+```bash
+for year in 2023 2024
+do
+  for month in Jan Feb Mar
+  do
+    echo "Processing data for $month, $year"
+  done
+done
+```

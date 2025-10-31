@@ -80,5 +80,47 @@ Explanation:
 
 If `size` is greater than 100, then `echo "Large dataset"` will be excuted. Else if `size` is greater than 10, then `echo "Medium dataset"` will be executed. Else, if none of these is true, then execute echo `"Small dataset"`.
 
+### Common Conditional Operators
+Conditional operators are often used in conditional statements to check the condition of an expression. So it's important to be familiar with the common ones.
+
+| Type                   | Operator | Meaning                  | Example               |
+| ---------------------- | -------- | ------------------------ | --------------------- |
+| **File test**          | `-f`     | File exists              | `[ -f file.csv ]`     |
+|                        | `-d`     | Directory exists         | `[ -d /data/raw ]`    |
+|                        | `-e`     | File or directory exists | `[ -e /tmp/log.txt ]` |
+|                        | `-s`     | File is not empty        | `[ -s data.csv ]`     |
+| **String comparison**  | `==`     | Strings are equal        | `[ "$var" == "yes" ]` |
+|                        | `!=`     | Strings are not equal    | `[ "$var" != "no" ]`  |
+|                        | `-z`     | String is empty          | `[ -z "$name" ]`      |
+| **Numeric comparison** | `-eq`    | Equal                    | `[ $a -eq 10 ]`       |
+|                        | `-ne`    | Not equal                | `[ $a -ne 5 ]`        |
+|                        | `-gt`    | Greater than             | `[ $a -gt 5 ]`        |
+|                        | `-lt`    | Less than                | `[ $a -lt 10 ]`       |
+|                        | `-ge`    | Greater or equal         | `[ $a -ge 10 ]`       |
+|                        | `-le`    | Less or equal            | `[ $a -le 10 ]`       |
+
+
+### Combining Conditions (AND & OR)
+
+As covered in the earlier modules, we can logically combine multiple commands. We can also combine multiple conditional tests using:
+- && → AND
+- || → OR
+
+For example:
+
+AND:
+```bash
+if [ -d "/data/raw" ] && [ -s "/data/raw/sales.csv" ]; then
+    echo "Data folder and file are ready."
+else
+    echo "Missing folder or empty file."
+fi
+
+OR:
+```bash
+if [ "$ENV" == "dev" ] || [ "$ENV" == "staging" ]; then
+    echo "Running in non-production environment."
+fi
+```
 
 

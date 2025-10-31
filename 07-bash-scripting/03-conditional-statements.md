@@ -123,4 +123,31 @@ if [ "$ENV" == "dev" ] || [ "$ENV" == "staging" ]; then
 fi
 ```
 
+### The case Statement (For Multiple Matches)
 
+For cleaner multi-condition handling, use `case`, just like in SQL or a `switch` statement in Python.
+
+Here is an example of how it works:
+
+```bash
+#!/bin/bash
+echo "Enter environment (dev, staging, prod):"
+read env
+
+case $env in
+  dev)
+    echo "You selected development environment."
+    ;;
+  staging)
+    echo "You selected staging environment."
+    ;;
+  prod)
+    echo "You selected production environment."
+    ;;
+  *)
+    echo "Unknown environment: $env"
+    ;;
+esac
+```
+
+This is bery useful in data engineering workloads.

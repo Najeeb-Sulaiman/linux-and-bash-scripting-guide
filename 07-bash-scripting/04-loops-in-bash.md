@@ -6,7 +6,7 @@ Instead of copying and pasting commands, loops help you automate repetitive task
 
 Just like other programming languages, there are different types of loop.
 
-### The for Loop
+### The `for` Loop
 
 The `for` loop runs a command for each item in a list. We use it to iterate over a list. It similar to for loops in Python.
 
@@ -61,4 +61,36 @@ do
 done
 ```
 
+### The `while` Loop
+
+The `while` loop runs as long as a condition is true. Similar to Python's while loop.
+
+Eample:
+
+```bash
+#!/bin/bash
+count=1
+
+while [ $count -le 5 ]
+do
+    echo "Run #$count"
+    ((count++))
+done
+```
+This will run the `echo` command 5 times, from 1 to 5.
+
+Let's look at this data engineering example:
+
+```bash
+#!/bin/bash
+while [ ! -f "/data/raw/daily_sales.csv" ]
+do
+    echo "Waiting for daily_sales.csv to arrive..."
+    sleep 5
+done
+
+echo "File detected! Starting ETL..."
+```
+
+This automates waiting for new data arrivals before running transformations. The code will continue to execute (in this case wait for a new file) until a new file is detected.
 

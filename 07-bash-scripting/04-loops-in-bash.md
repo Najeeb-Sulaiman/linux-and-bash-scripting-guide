@@ -53,7 +53,7 @@ do
 done
 ```
 
-You can also use the seq command:
+You can also use the `seq` command:
 ```bash
 for i in $(seq 1 5)
 do
@@ -100,7 +100,7 @@ There is an `until` Loop but we will not cover the details here. Just think of i
 
 A very important aspect of loops is the control statement. We use them to control the behavior of loops.
 
-- `break` - We use it to exit the loop early
+- **break** - We use it to exit the loop early
     ```bash
         for i in {1..10}
         do
@@ -111,7 +111,7 @@ A very important aspect of loops is the control statement. We use them to contro
             echo "Count: $i"
         done
     ```
-- continue – We use it to skip to the next iteration. For example if you want to skip the processing of certain files.
+- **continue** – We use it to skip to the next iteration. For example if you want to skip the processing of certain files.
     ```bash
         for i in {1..5}
         do

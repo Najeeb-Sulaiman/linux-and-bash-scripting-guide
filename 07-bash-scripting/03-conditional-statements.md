@@ -78,7 +78,7 @@ Explanation:
 - `elif` = “else if”
 - `-gt` means greater than
 
-If `size` is greater than 100, then `echo "Large dataset"` will be excuted. Else if `size` is greater than 10, then `echo "Medium dataset"` will be executed. Else, if none of these is true, then execute echo `"Small dataset"`.
+If `size` is greater than 100, then `echo "Large dataset"` will be excuted. Else if `size` is greater than 10, then `echo "Medium dataset"` will be executed. Else, if none of these is true, then execute `echo "Small dataset"`.
 
 ### Common Conditional Operators
 Conditional operators are often used in conditional statements to check the condition of an expression. So it's important to be familiar with the common ones.
@@ -103,8 +103,8 @@ Conditional operators are often used in conditional statements to check the cond
 ### Combining Conditions (AND & OR)
 
 As covered in the earlier modules, we can logically combine multiple commands. We can also combine multiple conditional tests using:
-- && → AND
-- || → OR
+- && - AND
+- || - OR
 
 For example:
 
@@ -115,6 +115,7 @@ if [ -d "/data/raw" ] && [ -s "/data/raw/sales.csv" ]; then
 else
     echo "Missing folder or empty file."
 fi
+```
 
 OR:
 ```bash
@@ -123,7 +124,7 @@ if [ "$ENV" == "dev" ] || [ "$ENV" == "staging" ]; then
 fi
 ```
 
-### The case Statement (For Multiple Matches)
+### The `case` Statement (For Multiple Matches)
 
 For cleaner multi-condition handling, use `case`, just like in SQL or a `switch` statement in Python.
 
@@ -151,3 +152,5 @@ esac
 ```
 
 This is bery useful in data engineering workloads.
+
+Next, we will look at Loops in Bash.

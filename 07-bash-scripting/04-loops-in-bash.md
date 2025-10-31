@@ -94,3 +94,32 @@ echo "File detected! Starting ETL..."
 
 This automates waiting for new data arrivals before running transformations. The code will continue to execute (in this case wait for a new file) until a new file is detected.
 
+There is an `until` Loop but we will not cover the details here. Just think of it as the opposite of `while` loop. it runs **until** the condition becomes true.
+
+### Loop Control Statements
+
+A very important aspect of loops is the control statement. We use them to control the behavior of loops.
+
+- `break` - We use it to exit the loop early
+    ```bash
+        for i in {1..10}
+        do
+            if [ $i -eq 5 ]; then
+                echo "Stopping loop at $i"
+                break
+            fi
+            echo "Count: $i"
+        done
+    ```
+- continue – We use it to skip to the next iteration. For example if you want to skip the processing of certain files.
+    ```bash
+        for i in {1..5}
+        do
+            if [ $i -eq 3 ]; then
+                echo "Skipping 3"
+                continue
+            fi
+            echo "Count: $i"
+        done
+    ```
+

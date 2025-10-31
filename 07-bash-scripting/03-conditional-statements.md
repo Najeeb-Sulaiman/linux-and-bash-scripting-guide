@@ -54,5 +54,31 @@ else
 fi
 ```
 
-Here, we are checking wether a directory exists and then taking action for each of the possible outcome (true or fals).
+Here, we are checking wether a directory exists and then taking action based on the outcome (true or fals).
+
+### The `if-elif-else` (Multiple Conditions)
+
+The `if-elif-else` statement is used to handle multiple conditions. For example:
+
+```bash
+#!/bin/bash
+size=50
+
+if [ $size -gt 100 ]; then
+    echo "Large dataset"
+elif [ $size -gt 10 ]; then
+    echo "Medium dataset"
+else
+    echo "Small dataset"
+fi
+```
+
+Explanation:
+
+- `elif` = “else if”
+- `-gt` means greater than
+
+If `size` is greater than 100, then `echo "Large dataset"` will be excuted. Else if `size` is greater than 10, then `echo "Medium dataset"` will be executed. Else, if none of these is true, then execute echo `"Small dataset"`.
+
+
 

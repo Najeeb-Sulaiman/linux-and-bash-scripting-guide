@@ -162,3 +162,62 @@ With the above script, every `csv` file’s existence is checked and logged. Can
 
 A lot of programming best practices is also applicable to Bash. For example, writting modular codes.
 
+### Combining Functions for Workflow Automation
+
+You can build modular scripts by defining multiple functions for different steps of a process.
+
+Let's look at an ea=xample ETL workflow:
+
+```bash
+#!/bin/bash
+
+extract() {
+    echo "Extracting data..."
+    cp /data/raw/sales.csv /tmp/sales.csv
+}
+
+transform() {
+    echo "Transforming data..."
+    awk -F, '$6 != "Failed"' /tmp/sales.csv > /tmp/sales_clean.csv
+}
+
+load() {
+    echo "Loading data..."
+    mv /tmp/sales_clean.csv /data/processed/
+}
+
+main() {
+    extract
+    transform
+    load
+    echo "ETL completed successfully!"
+}
+
+main
+```
+
+That is exactly similar to how you will write workflows in Python. This structure (with `main` as the entry point) makes scripts organized, modular, and production-ready.
+
+Can you see that Bash is just like another programming language. 
+
+Let me show you another interesting thing in Bash that you may already be familiar with in Python. I personally didn't know this exists in Bash until later.
+
+### Sourcing Functions from Another File
+
+If you have utility functions you use often, you can store them in a separate file and **import** them using the `source` or `.` command.
+
+To demonstarte this, let's create a simple function in a utility file called `utils.sh`
+```bash
+# contents of utils.sh
+log_message() {
+    echo "$(date): $1"
+}
+```
+Now let's call this utility function in the main bash file called `main.sh`:
+```bash
+# contents of main.sh
+source utils.sh
+
+log_message "Data pipeline started"
+```
+This like importing modules in Python. This can be very handy when working on large projects or writting reusable scripts.

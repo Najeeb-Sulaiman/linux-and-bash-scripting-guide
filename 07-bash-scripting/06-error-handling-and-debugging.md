@@ -31,3 +31,29 @@ If `/data/raw/sales.csv` doesn’t exist, the `cp` command will fail but the scr
 
 Now you should know what the danger is.
 
+Let's look at exit code and how we can use them for error handling.
+
+### Exit Codes in Bash
+
+Every command in Bash returns an exit status code:
+- `0` - Success
+- Non-zero - Failure
+
+You can access the exit code of the **last executed command** with `$?`.
+
+For example:
+```bash
+ls /data/raw
+echo $?
+```
+If /data/raw exists - 0
+If not - non-zero value (e.g., 2).
+
+We can use exit codes in conditions to check if a command succeeds before taking action.
+```bash
+if ls /data/raw > /dev/null 2>&1; then
+  echo "Directory exists"
+else
+  echo "Directory missing"
+fi
+```

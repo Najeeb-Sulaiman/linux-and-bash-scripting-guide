@@ -41,15 +41,15 @@ Every command in Bash returns an exit status code:
 
 You can access the exit code of the **last executed command** with `$?`.
 
-For example:
+**For example**:
 ```bash
 ls /data/raw
 echo $?
 ```
-If `/data/raw` exists - 0
-If not - non-zero value (e.g., `2`).
+- If `/data/raw` exists - 0
+- If not - non-zero value (e.g., `2`).
 
-We can use exit codes in conditions to check if a command succeeds before taking action.
+We can use exit codes in conditions to check if a command succeeds before taking action:
 ```bash
 if ls /data/raw > /dev/null 2>&1; then
   echo "Directory exists"
@@ -76,7 +76,7 @@ In the above script, if any command fails, the script stops right there, prevent
 
 **Be Careful**
 
-I want to warn you again. If you expect a command to fail (e.g, checking for file existence), use error handling around it:
+I want to warn you again. If you expect a command to fail (e.g, checking for file existence), use error handling around it. For example:
 ```bash
 set -e
 
@@ -97,7 +97,7 @@ if [ ! -d "/data/raw" ]; then
 fi
 ```
 
-Let me show you some exit codes meaning by conventio:
+Let me show you some `exit codes` meaning by convention:
 
 | Code | Meaning                        |
 | ---- | ------------------------------ |
@@ -133,6 +133,8 @@ Starting job...
 + cp /data/raw/input.csv /data/tmp/
 + awk -F, '$6 != "Failed"' /data/tmp/input.csv > /data/tmp/clean.csv
 ```
+As you can see, each command and the result of the command are shown in the output.
+
 Debug mode can be useful in CI/CD logs when troubleshooting job failures. We use this in our CI/CD at work.
 
 ### Using `set -u` to Catch Undefined Variables

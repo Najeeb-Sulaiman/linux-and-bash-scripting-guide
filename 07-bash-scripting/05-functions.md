@@ -123,3 +123,42 @@ calculate_sum 3 7
 
 **Note**: Always remember to use `local` to prevent naming conflicts in bigger scripts or if you intend to re-use a variable name in your script.
 
+### Functions That Return Data
+
+Functions can “return” data by printing it and capturing the output with command substitution. See below example to understand this:
+
+```bash
+get_date() {
+    date +"%Y-%m-%d"
+}
+
+today=$(get_date)
+echo "Today's date: $today"
+```
+This technique is common in data pipelines where one function generates a value (e.g, a timestamp or file path) for another function to use.
+
+Let's create a more sophisticated example by creating a `File Exisatence Checker`:
+```bash
+#!/bin/bash
+
+log_file="/data/logs/checker.log"
+
+check_file() {
+    local file=$1
+    if [ -f "$file" ]; then
+        echo "$(date): File '$file' exists" >> "$log_file"
+    else
+        echo "$(date): File '$file' missing" >> "$log_file"
+    fi
+}
+
+# Loop through files and check each one
+for file in /data/raw/*.csv
+do
+    check_file "$file"
+done
+```
+With the above script, every `csv` file’s existence is checked and logged. Can you see how neatly this is handle with a re-usable function. This function can be re-used to check csv files presence in any directory.
+
+A lot of programming best practices is also applicable to Bash. For example, writting modular codes.
+

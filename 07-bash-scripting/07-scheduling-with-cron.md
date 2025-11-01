@@ -93,3 +93,31 @@ So always redirect logs to a file.
 - `>>` - append logs
 - `2>&1` - redirect errors to same file as output
 
+### Testing Cron Jobs Before Scheduling
+
+It is very important to test your script manually forst before scheduling with cron.
+
+Run your script manually:
+```bash
+bash /home/najeeb/scripts/daily_etl.sh
+```
+Then simulate cron behavior:
+```bash
+bash -l -c "/home/najeeb/scripts/daily_etl.sh"
+```
+This will help you catch environment or permission issues early. Don't schedule blindly.
+
+
+We have covered the most important aspects of scheduling with cron, however, let me share some tips with you.
+
+| Tip                          | Description                                           |
+| ---------------------------- | ----------------------------------------------------- |
+| **Use logs**                 | Always redirect cron output to log files              |
+| **Test first**               | Run manually before scheduling                        |
+| **Absolute paths**           | Use full paths for commands and files                 |
+| **Avoid overlaps**           | Ensure jobs don’t run simultaneously (use lock files) |
+| **Monitor success/failure**  | Log exit codes or send notifications                  |
+| **Rotate logs**              | Clean up old logs automatically                       |
+
+
+That's it for Scheduling, see you in the next one.

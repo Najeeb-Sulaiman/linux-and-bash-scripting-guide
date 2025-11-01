@@ -31,7 +31,7 @@ If `/data/raw/sales.csv` doesn’t exist, the `cp` command will fail but the scr
 
 Now you should know what the danger is.
 
-Let's look at exit code and how we can use them for error handling.
+Let's look at `exit code` and how we can use them for error handling.
 
 ### Exit Codes in Bash
 

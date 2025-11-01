@@ -78,5 +78,29 @@ process_file "sales.csv" "/data/processed/sales.csv"
 ```
 It's as simple as that.
 
+### Return Values and Exit Codes
 
+Functions can return a status code (0 = success, anything else = failure). This can be useful if we want to intentionally mark our code run as success or failure.
+
+For example:
+```bash
+check_file() {
+    if [ -f "$1" ]; then
+        echo "File exists"
+        return 0
+    else
+        echo "File not found"
+        return 1
+    fi
+}
+
+check_file "/data/raw/data.csv"
+echo "Status code: $?"
+```
+Output:
+```bash
+File exists
+Status code: 0
+```
+Remember, we use `$?` to capture the exit status of the last executed command.
 

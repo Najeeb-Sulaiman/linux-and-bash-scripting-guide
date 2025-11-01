@@ -85,3 +85,30 @@ if [ ! -f "input.csv" ]; then
   exit 1
 fi
 ```
+
+### Custom Error Messages with exit
+
+You can manually stop a script and print an error message with exit.
+
+```bash
+if [ ! -d "/data/raw" ]; then
+  echo "Data directory missing!"
+  exit 1
+fi
+```
+
+Let me show you some exit codes meaning by conventio:
+
+| Code | Meaning                        |
+| ---- | ------------------------------ |
+| 0    | Success                        |
+| 1    | General error                  |
+| 2    | Misuse of shell builtins       |
+| 126  | Command invoked cannot execute |
+| 127  | Command not found              |
+| 130  | Script terminated by Ctrl+C    |
+
+You can check the documentation for more.
+
+A powerful way to handle errors gracefully is with the `trap` command. I will not cover this here but you can look it up to learn more about it.
+

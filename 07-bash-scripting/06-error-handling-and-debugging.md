@@ -149,3 +149,16 @@ If `$USER_NAME` is not defined, Bash exits with:
 ```
 This can be useful to prevent small bugs.
 
+### Combining Safety Options
+
+You can combine multiple safety flags for more robust scripts. With what we have learnt earlier, this is straightforward:
+
+```bash
+#!/bin/bash
+set -euo pipefail
+# -e  - exit on error
+# -u  - undefined variables cause error
+# -o pipefail - fail if any command in a pipeline fails
+```
+
+Finally, I want to stress that logging and monitoring is essential for production jobs. They give you visibility into your workloads. You should always monitor your workloads for errors/anomalies and log them for review. 

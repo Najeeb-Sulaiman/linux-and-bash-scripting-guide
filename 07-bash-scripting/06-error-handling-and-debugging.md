@@ -57,3 +57,32 @@ else
   echo "Directory missing"
 fi
 ```
+
+### Stopping Scripts on Error (set -e)
+
+`set -e` tells Bash to immediately exit if any command fails.
+
+```bash
+#!/bin/bash
+set -e
+
+echo "Starting pipeline..."
+cp /data/raw/input.csv /data/tmp/
+awk -F, '$6 != "Failed"' /data/tmp/input.csv > /data/tmp/clean.csv
+mv /data/tmp/clean.csv /data/processed/
+echo "Pipeline completed successfully!"
+```
+In the above script, if any command fails, the script stops right there, preventing partial or corrupted processing.
+
+**Be Careful**
+
+I want to warn you again. If you expect a command to fail (e.g, checking for file existence), use error handling around it:
+```bash
+set -e
+
+if [ ! -f "input.csv" ]; then
+  echo "Error: input.csv not found"
+  exit 1
+fi
+```
+

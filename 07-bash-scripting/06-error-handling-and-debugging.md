@@ -1,0 +1,33 @@
+## Error Handling and Debugging in Bash
+
+Let me tell you a fact in Data Engineering, **things can and will go wrong**. But how you prepare for this and handle this when it happens is what makes you an exceptional engineer. When building your data pipelines or any automation many things can go wrong, there could be missing files, issues, failed API calls, or unexpected input.
+
+In this module, you will learn how to:
+- Detect and handle errors gracefully
+- Debug scripts efficiently
+- Write reliable Bash scripts for production use
+
+Before we dive-deeper, let's explore some reasons why error handling matters.
+
+Without proper error handling, a Bash script can:
+- Continue running after a failure (causing data corruption)
+- Overwrite important files
+- Fail silently (and you won’t even know it happened)
+
+All these can be very costly in production, so pay attention.
+
+Take a look at this example:
+```bash
+#!/bin/bash
+cp /data/raw/sales.csv /data/processed/
+echo "File copied!"
+```
+
+Can you already guess what will happen?
+
+Let me tell ypu if you don't know:
+
+If `/data/raw/sales.csv` doesn’t exist, the `cp` command will fail but the script still prints “File copied!”.
+
+Now you should know what the danger is.
+

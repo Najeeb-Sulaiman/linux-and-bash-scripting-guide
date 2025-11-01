@@ -45,3 +45,38 @@ For example:
 
 You don't need to memorize all this. There is a super useful website that helps us write cron expression interactively - https://crontab.guru/
 
+### Commands to Mmange Cron Jobs
+
+**View Your Crontab**
+```bash
+crontab -l
+```
+
+**Edit Your Crontab**
+```bash
+crontab -e
+```
+This opens your user’s crontab in the default text editor.
+
+**Remove All Cron Jobs**
+```bash
+crontab -r
+```
+I don't need to tell you to becareful with this command.
+
+Suppose you have a script `/home/najeeb/scripts/daily_etl.sh`, let's schedule it using `cron`:
+
+**Make it executable** (Always remeber this):
+```bash
+chmod +x /home/najeeb/scripts/daily_etl.sh
+```
+**Schedule it**:
+```bash
+crontab -e
+```
+**Add**
+```bash
+0 2 * * * /home/najeeb/scripts/daily_etl.sh
+```
+This runs the ETL job daily at 2 AM.
+

@@ -41,3 +41,42 @@ greet
 I bet you already know what the output is.
 
 **Note**: Functions must be defined before they are called in the script.
+
+### Functions with Parameters
+
+You can pass arguments to a function, just like in Python.
+
+Let's pass a name parameter to our greeting function above:
+
+```bash
+#!/bin/bash
+
+greet() {
+    echo "Hello, $1!"
+}
+
+greet "Najeeb"
+```
+Output:
+```text
+Hello, Najeeb!
+```
+
+**Notes**:
+- `$1`, `$2`, `$3` represent the first, second, and third arguments passed to the function.
+- `$@` represents all arguments.
+
+For example, let's create a function that takes multiple parameters:
+
+```bash
+process_file() {
+    echo "Processing file: $1"
+    echo "Saving to: $2"
+}
+
+process_file "sales.csv" "/data/processed/sales.csv"
+```
+It's as simple as that.
+
+
+

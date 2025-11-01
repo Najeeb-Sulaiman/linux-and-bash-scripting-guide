@@ -76,6 +76,12 @@ process_file() {
 
 process_file "sales.csv" "/data/processed/sales.csv"
 ```
+Output:
+```text
+Processing file: sales.csv
+Saving to: /data/processed/sales.csv
+```
+
 It's as simple as that.
 
 ### Return Values and Exit Codes
@@ -158,7 +164,8 @@ do
     check_file "$file"
 done
 ```
-With the above script, every `csv` file’s existence is checked and logged. Can you see how neatly this is handle with a re-usable function. This function can be re-used to check csv files presence in any directory.
+With the above script, every `csv` file’s existence is checked and logged. Can you see how neatly this is handle with a re-usable function. 
+This function can be re-used to check csv files presence in any directory.
 
 A lot of programming best practices is also applicable to Bash. For example, writting modular codes.
 

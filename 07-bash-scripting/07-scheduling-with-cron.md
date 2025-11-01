@@ -80,3 +80,16 @@ crontab -e
 ```
 This runs the ETL job daily at 2 AM.
 
+### Redirecting Logs for Cron Jobs
+
+Cron jobs run silently by default, they don’t show output on your screen.
+
+So always redirect logs to a file.
+
+**Example**:
+```bash
+0 3 * * * /home/najeeb/scripts/backup.sh >> /home/najeeb/logs/backup.log 2>&1
+```
+- `>>` - append logs
+- `2>&1` - redirect errors to same file as output
+

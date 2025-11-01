@@ -104,3 +104,22 @@ Status code: 0
 ```
 Remember, we use `$?` to capture the exit status of the last executed command.
 
+### Using Variables Inside Functions
+
+Variables inside a function are **global by default**, meaning they affect the rest of the script.
+
+To create function-specific variables, use the `local` keyword.
+
+```bash
+calculate_sum() {
+    local a=$1
+    local b=$2
+    local sum=$((a + b))
+    echo "Sum: $sum"
+}
+
+calculate_sum 3 7
+```
+
+**Note**: Always remember to use `local` to prevent naming conflicts in bigger scripts or if you intend to re-use a variable name in your script.
+

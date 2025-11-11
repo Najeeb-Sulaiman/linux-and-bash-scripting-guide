@@ -51,8 +51,9 @@ When the script runs:
 
 ### Submission
 
-You are to submit:
+You are to submit a GitHub repo containing:
 1. `setup.sh` — fully working script
+2. `setup.log` - Log file for the script.
 2. `README.md` — explaining:
     - What the script does
     - How to execute it

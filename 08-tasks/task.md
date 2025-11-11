@@ -28,5 +28,22 @@ Create a Bash script named `setup.sh` that performs the following actions:
 7. Automatically install a few Python packages (like pandas or requests).
 8. Write a comprehensive log of all setup actions to a file called `setup.log`.
 
-## Script Functionality
+### Script Functionality
+
+When the script runs:
+
+- It should **create or activate** a `.venv` folder in the project directory.
+- It should **upgrade pip** and confirm success.
+- It should check for `.gitignore` and create one if missing.
+- It should **print progress messages** with different colors for clarity.
+- It should end with a final message indicating that setup is complete.
+
+### Note
+
+- **Think about reusability:** if someone runs your script twice, it should not break or duplicate files.
+- Use functions to organize your code logically.
+- Use conditional checks to decide whether to create or skip actions.
+- Include clear messages to help the user understand what is happening.
+- Handle errors properly.
+- Test with different scenario (No `.venv` directory exists, `.venv` already exists, `.gitignore` already exists etc.)
 

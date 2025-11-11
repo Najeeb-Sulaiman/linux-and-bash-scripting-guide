@@ -47,3 +47,12 @@ When the script runs:
 - Handle errors properly.
 - Test with different scenario (No `.venv` directory exists, `.venv` already exists, `.gitignore` already exists etc.)
 
+### Submission
+
+You are to submit:
+1. `setup.sh` — fully working script
+2. `README.md` — explaining:
+    - What the script does
+    - How to execute it
+    - Example outputs (copy your terminal messages here)
+    - Challenges faced and lessons learned

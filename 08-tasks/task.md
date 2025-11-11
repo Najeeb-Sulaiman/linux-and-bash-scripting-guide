@@ -16,7 +16,7 @@ Create a Bash script named `setup.sh` that performs the following actions:
 2. Upgrades pip
     - Ensure the latest version of pip is installed in the environment.
 3. Generates a `.gitignore` file
-    - The file should include standard ignore rules for a Python project (e.g .venv, ).
+    - The file should include standard ignore rules for a Python project (e.g .venv ).
     - Skip creation if it already exists, but display a warning message.
 4. Provides colorful, user-friendly feedback
     - Use color codes to display INFO, SUCCESS, WARNING, and ERROR messages.
@@ -36,6 +36,8 @@ When the script runs:
 - It should **upgrade pip** and confirm success.
 - It should check for `.gitignore` and create one if missing.
 - It should **print progress messages** with different colors for clarity.
+- It should automatically install few Python packages.
+- Write logs to a log file.
 - It should end with a final message indicating that setup is complete.
 
 ### Note

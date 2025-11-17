@@ -1,1 +1,25 @@
-theme: jekyll-theme-Hacker
+remote_theme: pmarsceill/just-the-docs@v0.3.3
+color_scheme: dark
+
+title: Linux & Bash Scripting Guide
+description: A comprehensive guide for all things Linux and Bash.
+
+search_enabled: true
+
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - Capfile
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - vendor
+  - .gitignore
